@@ -6,7 +6,7 @@ authors = ["Agustin Arce <agustinarceprincich@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.9"
 fastapi = {extras = ["slim"], version = "^0.111.1"}
 httpx = "^0.27.0"
 
