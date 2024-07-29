@@ -1,7 +1,7 @@
 import hashlib
 import json
 from datetime import datetime
-from typing import List, Optional
+from typing import List
 
 from mini_blockchain.block import Block, Transaction
 

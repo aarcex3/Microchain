@@ -25,13 +25,13 @@ class Block:
         self,
         index: int,
         timestamp: datetime,
-        transtacions: list[Transaction],
+        transactions: list[Transaction],
         proof: int,
         previous_hash: str,
     ) -> None:
         self.index: int = index
         self.timestamp: datetime = timestamp
-        self.transactions: list[Transaction] = transtacions
+        self.transactions: list[Transaction] = transactions
         self.proof: int = proof
         self.previous_hash: str = previous_hash
 
