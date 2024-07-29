@@ -1,4 +1,6 @@
+import json
 from datetime import datetime
+from typing import Optional
 
 
 class Transaction:
@@ -6,6 +8,16 @@ class Transaction:
         self.sender = sender
         self.recipient = recipient
         self.amount = amount
+
+    def to_dict(self) -> dict:
+        """
+        Convert the Transaction to a dictionary.
+        """
+        return {
+            "sender": self.sender,
+            "recipient": self.recipient,
+            "amount": self.amount,
+        }
 
 
 class Block:
@@ -22,3 +34,15 @@ class Block:
         self.transactions: list[Transaction] = transtacions
         self.proof: int = proof
         self.previous_hash: str = previous_hash
+
+    def to_dict(self) -> dict:
+        """
+        Convert the Block to a dictionary.
+        """
+        return {
+            "index": self.index,
+            "timestamp": self.timestamp.isoformat(),
+            "transactions": [tx.to_dict() for tx in self.transactions],
+            "proof": self.proof,
+            "previous_hash": self.previous_hash,
+        }
