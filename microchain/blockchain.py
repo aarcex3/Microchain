@@ -6,9 +6,9 @@ from urllib.parse import urlparse
 
 import httpx
 
-from mini_blockchain.block import Block
-from mini_blockchain.node import Node
-from mini_blockchain.transaction import Transaction
+from microchain.block import Block
+from microchain.node import Node
+from microchain.transaction import Transaction
 
 
 class Blockchain:

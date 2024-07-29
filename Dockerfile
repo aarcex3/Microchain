@@ -24,4 +24,4 @@ COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 
 COPY mini_blockchain ./mini_blockchain
 
-ENTRYPOINT ["python", "-m", "mini_blockchain.server"]
+ENTRYPOINT ["python", "-m", "microchain.server"]

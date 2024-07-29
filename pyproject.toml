@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "mini-blockchain"
+name = "microchain"
 version = "0.1.0"
 description = ""
 authors = ["Agustin Arce <agustinarceprincich@gmail.com>"]

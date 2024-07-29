@@ -1,6 +1,6 @@
 from pydantic import BaseModel, HttpUrl
 
-from mini_blockchain.node import Node
+from microchain.node import Node
 
 
 class NewTransaction(BaseModel):

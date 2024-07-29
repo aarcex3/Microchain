@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 
-from mini_blockchain.transaction import Transaction
+from microchain.transaction import Transaction
 
 
 class Block:

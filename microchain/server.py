@@ -4,10 +4,10 @@ from uuid import uuid4
 from fastapi import FastAPI, status
 from fastapi.responses import JSONResponse
 
-from mini_blockchain.block import Block, Transaction
-from mini_blockchain.blockchain import Blockchain
-from mini_blockchain.node import Node
-from mini_blockchain.schemas import NewNodes, NewTransaction
+from microchain.block import Block, Transaction
+from microchain.blockchain import Blockchain
+from microchain.node import Node
+from microchain.schemas import NewNodes, NewTransaction
 
 server: FastAPI = FastAPI()
 
