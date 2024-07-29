@@ -96,3 +96,33 @@ class Blockchain:
             Block: The most recent block in the blockchain.
         """
         return self.chain[-1]
+
+    def proof_of_work(self, last_proof: int) -> int:
+        """
+        Simple Proof of Work Algorithm:
+            - Find a number p' such that hash(pp') contains leading 4 zeroes, where p is the previous p'
+            - p is the previous proof, and p' is the new proof
+        Args:
+            last_proof (int)
+        Return:
+            proff (int)
+        """
+        proof: int = 0
+        while self.valid_proof(last_proof, proof) is False:
+            proof += 1
+        return proof
+
+    @staticmethod
+    def valid_proof(last_proof: int, proof: int) -> bool:
+        """
+        Validates the Proof: Does hash(last_proof, proof) contain 4 leading zeroes?
+        Args:
+            last_proof (int): Previous Proof
+            proof (int): Current Proof
+
+        Return:
+            (bool): True if correct, False if not.
+        """
+        guess: bytes = f"{last_proof}{proof}".encode()
+        guess_hash: str = hashlib.sha256(guess).hexdigest()
+        return guess_hash[:4] == "0000"
